@@ -1,0 +1,3 @@
+path        = "/notfound"
+status      = "404"
+body        = "Not Found"
