@@ -38,6 +38,29 @@ As simples is always better, I've put here a ridiculously easy to run app with n
 ASCII art: http://www.chris.com/ascii/index.php?art=creatures/unicorns
 
 
+Instructions
+==========
+
+Developing
+----------
+To develop `RestShifter`, you are going to need [Bundler][1] 
+
+    $ git git@github.com:camiloribeiro/RestShifter.git
+    $ cd RestShifter
+    $ bundle install
+    $ rake
+
+The last step is launching the regression tests and all should be green.
+
+If you have any problems, please let me know.
+
+[1]: http://gembundler.com
+
+Using
+-----
+
+Soon.
+
 LICENSE
 =======
 
