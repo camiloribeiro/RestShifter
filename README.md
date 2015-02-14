@@ -1,5 +1,10 @@
 # RestShifter
 
+[![Gem Version](https://badge.fury.io/rb/RestShifter.png)](https://rubygems.org/gems/RestShifter)
+[![Build Status](https://secure.travis-ci.org/camiloribeiro/RestShifter.png)](http://travis-ci.org/camiloribeiro/RestShifter)
+[![endorse](https://api.coderwall.com/camiloribeiro/endorsecount.png)](https://coderwall.com/camiloribeiro)
+
+
                                   /
                        __       //      The rest api ShapeShifter!
                        -\= \=\ //       
@@ -9,7 +14,7 @@
        _ _ _ _     /_/    \  ]  /--      before the dependent services are in place
       /\ ( (- \    /       ] ] ]==-     
      (\ _\_\_\-\__/     \  (,_,)-- 
-    (\_/                 \     \-         Some of thie main featureas are:
+    (\_/                 \     \-         Some of the main features are:
     \/      /       (   ( \  ] /)          - Easy to define rest paths with custom routes
     /      (         \   \_ \./ )          - Easy to define rest paths with custom responses
     (       \         \      )  \          - Definition of response times and response codes
