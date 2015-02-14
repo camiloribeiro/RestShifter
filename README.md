@@ -1,10 +1,35 @@
 # RestShifter
 
-The rest api ShapeShifter!
+                                  /
+                       __       //      The rest api ShapeShifter!
+                       -\= \=\ //       
+                     --=_\=---//=--     This is a Sinatra app with no predefined routs.    
+                   -_==/  \/ //\/--     This replaces mocks for integration level tests. 
+                    ==/   /O   O\==--   This can be used also to create integration tests for future apps/feature
+       _ _ _ _     /_/    \  ]  /--     
+      /\ ( (- \    /       ] ] ]==-     
+     (\ _\_\_\-\__/     \  (,_,)-- 
+    (\_/                 \     \-         Some of thie main featureas are:
+    \/      /       (   ( \  ] /)          - Easy to define rest paths with custom routs and responses
+    /      (         \   \_ \./ )          - Definition of response times and response codes
+    (       \         \      )  \          - Suitable to any kind of tests that use Rest                                          
+    (       /\_ _ _ _ /---/ /\_  \    
+     \     / \     / ____/ /   \  \        
+      (   /   )   / /  /__ )   (  ) 
+      (  )   / __/ '---`       / /
+      \  /   \ \             _/ /     This is still under development, so do not use it.
+      ] ]     )_\_         /__\/       
+      /_\     ]___\                     
+     (___)                     
 
-This is a sinatra app, with no routs, responses or behaviour defined. It can be routed wherever you like. It uses a declarative file to define all your services.
 
-This should be used only to mock services. I will update that file later.
+
+The Idea
+=======
+
+Are you tired of integrating with services that does not exist yet? Or that are expensive to spin up? Or just want to know what happens whan that service times out or return a ugly error? So you should know RestShifter :)
+As simples is always better, I've put here a ridiculously easy to run app with no natural behaviour. You just have to create declarative files and start this app.
+
 
 LICENSE
 =======
