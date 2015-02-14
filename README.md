@@ -30,6 +30,8 @@ The Idea
 Are you tired of integrating with services that does not exist yet? Or that are expensive to spin up? Or just want to know what happens whan that service times out or return a ugly error? So you should know RestShifter :)
 As simples is always better, I've put here a ridiculously easy to run app with no natural behaviour. You just have to create declarative files and start this app.
 
+ASCII art: http://www.chris.com/ascii/index.php?art=creatures/unicorns
+
 
 LICENSE
 =======
