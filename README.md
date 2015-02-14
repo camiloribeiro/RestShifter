@@ -3,17 +3,17 @@
                                   /
                        __       //      The rest api ShapeShifter!
                        -\= \=\ //       
-                     --=_\=---//=--     This is a Sinatra app with no predefined routs.    
+                     --=_\=---//=--     This is a Sinatra app with no predefined routes.    
                    -_==/  \/ //\/--     This replaces mocks for integration level tests. 
-                    ==/   /O   O\==--   This can be used also to create integration tests for future apps/feature
-       _ _ _ _     /_/    \  ]  /--     
+                    ==/   /O   O\==--   This can be used also to create tests for new feature
+       _ _ _ _     /_/    \  ]  /--      before the dependent services are in place
       /\ ( (- \    /       ] ] ]==-     
      (\ _\_\_\-\__/     \  (,_,)-- 
     (\_/                 \     \-         Some of thie main featureas are:
-    \/      /       (   ( \  ] /)          - Easy to define rest paths with custom routs and responses
-    /      (         \   \_ \./ )          - Definition of response times and response codes
-    (       \         \      )  \          - Suitable to any kind of tests that use Rest                                          
-    (       /\_ _ _ _ /---/ /\_  \    
+    \/      /       (   ( \  ] /)          - Easy to define rest paths with custom routes
+    /      (         \   \_ \./ )          - Easy to define rest paths with custom responses
+    (       \         \      )  \          - Definition of response times and response codes
+    (       /\_ _ _ _ /---/ /\_  \         - Suitable to any kind of tests that use Rest                                          
      \     / \     / ____/ /   \  \        
       (   /   )   / /  /__ )   (  ) 
       (  )   / __/ '---`       / /
