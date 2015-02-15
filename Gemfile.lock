@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    RestShifter (0.0.1)
+    RestShifter (0.0.2)
       icecream
       sinatra
 
@@ -26,7 +26,7 @@ GEM
     docile (1.1.5)
     gherkin (2.12.2)
       multi_json (~> 1.3)
-    icecream (0.0.12)
+    icecream (0.0.13)
     method_source (0.8.2)
     mime-types (2.4.3)
     multi_json (1.10.1)
