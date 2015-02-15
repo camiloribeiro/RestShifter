@@ -1,0 +1,9 @@
+
+
+** 0.0.2
+ - First version that inclues:
+    -- Basic request with body, content-type and accept, for both, post and get operations
+
+** 0.0.1
+ - First version that inclues:
+    -- Basic request with body for get operations
