@@ -1,0 +1,7 @@
+method_used                 = "get"
+path                        = "/notfound"
+request_accept              = "application/json"
+request_content_type        = nil
+response_status             = "404"
+response_body               = "Not Found with accept"
+response_content_type       = "application/foo.company.product.type-version2+json"

@@ -1,0 +1,7 @@
+method_used                 = "get"
+path                        = "/ok"
+request_accept              = nil
+request_content_type        = nil
+response_status             = "200"
+response_body               = "success"
+response_content_type       = "application/json"
