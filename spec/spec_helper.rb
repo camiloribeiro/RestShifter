@@ -15,6 +15,5 @@ end
 
 RSpec.configure do |config|
   config.color = true
-  config.formatter     = 'documentation'
   config.include RSpecMixin 
 end
