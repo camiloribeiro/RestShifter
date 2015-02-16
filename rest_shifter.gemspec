@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "RestShifter/version"
 
 Gem::Specification.new do |s|
-  s.name        = "RestShifter"
+  s.name        = "rest_shifter"
   s.version     = RestShifter::VERSION
   s.authors     = ["Camilo Ribeiro"]
   s.email       = ["camilo@camiloribeiro.com"]
@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.default_executable = 'RestShifter'
+  s.default_executable = 'rest_shifter'
 
   s.require_paths = ["lib"]
 
