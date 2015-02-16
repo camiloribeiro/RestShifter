@@ -36,3 +36,5 @@ posts.each do |service|
     service.response_body
   end
 end
+
+Shifter.run! 

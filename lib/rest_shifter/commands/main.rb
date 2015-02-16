@@ -6,6 +6,9 @@ class RestShifter::Commands::Main
       cmd = args.shift
 
       case cmd
+      when "-s", "--start", "start"
+        RestShifter::Commands::Start.run
+        exit 0
       when "-h", "--help", NilClass
         RestShifter::Commands::Help.run
         exit 0

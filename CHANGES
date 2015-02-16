@@ -1,4 +1,8 @@
 
+** 0.0.4
+ - Command -s / start added
+    -- Now the gem is able to start its rest service by command line
+
 ** 0.0.3
  - Algorithm improvements and big renaming:
     -- Adding a customizable algorithm that will allow to take decisions based on headers for routing
