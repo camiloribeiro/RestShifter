@@ -1,0 +1,2 @@
+module RestShifter::Commands
+end
