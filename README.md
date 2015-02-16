@@ -12,14 +12,14 @@
                    -_==/  \/ //\/--     This replaces mocks for integration level tests. 
                     ==/   /O   O\==--   This can be used also to create tests for new feature
        _ _ _ _     /_/    \  ]  /--      before the dependent services are in place
-      /\ ( (- \    /       ] ] ]==-     
+      /\ ( (- \    /       ] ] ]==-     This can also be used for Rest prototipation
      (\ _\_\_\-\__/     \  (,_,)-- 
-    (\_/                 \     \-         Some of the main features are:
-    \/      /       (   ( \  ] /)          - Easy to define rest paths with custom routes
-    /      (         \   \_ \./ )          - Easy to define rest paths with custom responses
-    (       \         \      )  \          - Definition of response times and response codes
-    (       /\_ _ _ _ /---/ /\_  \         - Suitable to any kind of tests that use Rest                                          
-     \     / \     / ____/ /   \  \        
+    (\_/                 \     \-        
+    \/      /       (   ( \  ] /)         Some of the main features are:
+    /      (         \   \_ \./ )          - Easy to define rest paths with custom routes
+    (       \         \      )  \          - Easy to define rest paths with custom responses
+    (       /\_ _ _ _ /---/ /\_  \         - Definition of response times and response codes
+     \     / \     / ____/ /   \  \        - Suitable to any kind of tests that use Rest                                            
       (   /   )   / /  /__ )   (  ) 
       (  )   / __/ '---`       / /
       \  /   \ \             _/ /     This is still under development, so do not use it.
