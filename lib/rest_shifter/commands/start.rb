@@ -8,5 +8,6 @@ class RestShifter::Commands::Start
       $:.unshift(path) if File.directory?(path) && !$:.include?(path)
       require 'rest_shifter/shifter.rb'
     end
+    Shifter.run! 
   end
 end

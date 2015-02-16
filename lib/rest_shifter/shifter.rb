@@ -37,4 +37,3 @@ posts.each do |service|
   end
 end
 
-Shifter.run! 
