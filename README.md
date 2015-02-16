@@ -1,6 +1,6 @@
-# RestShifter
+# RestShifter (rest_shifter)
 
-[![Gem Version](https://badge.fury.io/rb/RestShifter.png)](https://rubygems.org/gems/RestShifter)
+[![Gem Version](https://badge.fury.io/rb/rest_shifter.png)](https://rubygems.org/gems/rest_shifter)
 [![Build Status](https://secure.travis-ci.org/camiloribeiro/RestShifter.png)](http://travis-ci.org/camiloribeiro/RestShifter)
 [![endorse](https://api.coderwall.com/camiloribeiro/endorsecount.png)](https://coderwall.com/camiloribeiro)
 
