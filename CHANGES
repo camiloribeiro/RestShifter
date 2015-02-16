@@ -1,4 +1,10 @@
 
+** 0.0.3
+ - Algorithm improvements and big renaming:
+    -- Adding a customizable algorithm that will allow to take decisions based on headers for routing
+ - First version that includes cli:
+    -- Renaming to follow recommended gem naming
+    -- First version of the cli with help, verion e fallback to help
 
 ** 0.0.2
  - First version that inclues:
