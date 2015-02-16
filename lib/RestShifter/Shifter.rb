@@ -15,22 +15,24 @@ shapes.all.each do |shape|
   services << shapes.flavor(shape.to_s.gsub!("@", "").to_sym)
 end
 
-services.each do |service|
+gets = services.select { |service| service.method_used == "get"  }
+gets_paths = gets.map { |service| service.path  }.uniq
 
-  if service.method_used == "get" 
-    get service.path do
-      status service.response_status
-      content_type service.response_content_type
-      service.response_body
-    end
+posts = services.select { |service| service.method_used == "post"  }
+posts_paths = gets.map { |service| service.path  }.uniq
+
+gets.each do |service|
+  get service.path do
+    status service.response_status
+    content_type service.response_content_type
+    service.response_body
   end
+end
 
-  if service.method_used == "post"
-    post service.path do
-      status service.response_status
-      content_type service.response_content_type
-      service.response_body
-    end
-
+posts.each do |service|
+  post service.path do
+    status service.response_status
+    content_type service.response_content_type
+    service.response_body
   end
 end
