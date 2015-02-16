@@ -3,7 +3,7 @@ require 'coveralls'
 require 'rest_client'
 require 'rack/test'
 
-require File.join(File.dirname(__FILE__), '../lib/RestShifter/Shifter.rb')
+require File.join(File.dirname(__FILE__), '../lib/rest_shifter/shifter.rb')
 ENV['RACK_ENV'] = 'test'
 
 Coveralls.wear_merged!

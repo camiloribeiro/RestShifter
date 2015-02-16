@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + "/spec_helper"
-require File.join(File.dirname(__FILE__), '../lib/RestShifter/Shifter.rb')
+require File.join(File.dirname(__FILE__), '../lib/rest_shifter/shifter.rb')
 
 describe RestShifter do
 
