@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'rest-shifter'
+
+RestShifter::Commands::Main.run
