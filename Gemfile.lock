@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    RestShifter (0.0.2)
+    rest_shifter (0.0.3)
       icecream
       sinatra
 
@@ -80,7 +80,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  RestShifter!
   coveralls
   cucumber
   nyan-cat-formatter
@@ -88,5 +87,6 @@ DEPENDENCIES
   rack-test
   rake
   rest-client
+  rest_shifter!
   rspec
   simplecov
