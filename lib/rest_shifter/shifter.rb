@@ -6,10 +6,10 @@ module RestShifter; end
 
 class Shifter < Sinatra::Base
 
-  # test
-  # shapes = IceCream::IceCream.new File.join(File.dirname(__FILE__), "../../spec/flavors")
-  # prod
   shapes = IceCream::IceCream.new File.dirname("#{Dir.home}/.rest_shifter/flavors/*")
+  if ENV["RACK_ENV"] == "test"
+    shapes = IceCream::IceCream.new File.join(File.dirname(__FILE__), "../../spec/flavors")
+  end
 
   services = []
   shapes.all.each do |shape|

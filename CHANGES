@@ -1,4 +1,8 @@
 
+** 0.0.7
+ - Temp hack: RACK_ENV=testing  
+   -- using enviroment variable to define if we are or not using testing flavour folder
+
 ** 0.0.6
  - Bugfix: Using the right path
    -- Accidentally changed the path to use the testing one. Build is going to brek
