@@ -10,5 +10,5 @@ RSpec::Core::RakeTask .new(:spec) do |task|
 end
 
 RSpec::Core::RakeTask .new(:nyan) do |task|
-    task.rspec_opts = ["--format NyanCatFormater"]
+    task.rspec_opts = ["--format NyanCatWideFormatter"]
 end
