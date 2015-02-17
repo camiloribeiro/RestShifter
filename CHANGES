@@ -1,4 +1,8 @@
 
+** 0.0.5
+ - Bugfix: Missing pry gem
+   -- Pry should not be a service dependency. 
+ 
 ** 0.0.4
  - Command -s / start added
     -- Now the gem is able to start its rest service by command line
