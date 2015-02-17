@@ -8,9 +8,9 @@ module RestShifter; end
 class Shifter < Sinatra::Base
 
   # test
-  # shapes = IceCream::IceCream.new File.join(File.dirname(__FILE__), "../../spec/flavors")
+   shapes = IceCream::IceCream.new File.join(File.dirname(__FILE__), "../../spec/flavors")
   # prod
-  shapes = IceCream::IceCream.new File.dirname("#{Dir.home}/.rest_shifter/flavors/*")
+  #shapes = IceCream::IceCream.new File.dirname("#{Dir.home}/.rest_shifter/flavors/*")
 
   services = []
   shapes.all.each do |shape|
