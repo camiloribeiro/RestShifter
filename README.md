@@ -62,18 +62,23 @@ Using
 The focus here is in simplicity.
 
 Install rest_shifter
+
     $ gem install rest_shifter
 
 Create the service (you can choose any name that have only letters and underline. It is required to start with a letter )
+
     $ rest_shifter -c hello_world
 
 Start the service
+
     $ rest_shifter -s
 
 Go to a browser and open the url:
+
     $ http://localhost:4567/hello_world
 
 You should see the following JSON:
+
     $ { \hello_world\ : \Your service is working fine. :D\ }
 
 To edit the service you just created, go to ~/.rest_shifter/flavors/hello_world.flavor 

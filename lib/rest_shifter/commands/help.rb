@@ -11,6 +11,8 @@ rest_shifter version #{RestShifter::VERSION}: The ShapeShifter Rest Service
     help              Show this help text
     
     --start, -s:   Start service on port 4567
+
+    --create, -c:  Create a config file for a service (send a name as argument)
       
     --version, -v:   Print version and exit
     --help, -h:   Show this message
