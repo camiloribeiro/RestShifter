@@ -2,6 +2,8 @@
 ** 0.0.4
  - Command -s / start added
     -- Now the gem is able to start its rest service by command line
+ - Command -c / create added
+    -- Now the gem is able to create a new file to configure a service
 
 ** 0.0.3
  - Algorithm improvements and big renaming:

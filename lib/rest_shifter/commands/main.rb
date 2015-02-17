@@ -9,6 +9,9 @@ class RestShifter::Commands::Main
       when "-s", "--start", "start"
         RestShifter::Commands::Start.run
         exit 0
+      when "-c", "--create", "create"
+        RestShifter::Commands::Create.run
+        exit 0
       when "-h", "--help", NilClass
         RestShifter::Commands::Help.run
         exit 0

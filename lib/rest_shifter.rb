@@ -17,6 +17,7 @@ require File.join(File.dirname(__FILE__), './rest_shifter/commands/main')
 require File.join(File.dirname(__FILE__), './rest_shifter/commands/help')
 require File.join(File.dirname(__FILE__), './rest_shifter/commands/version')
 require File.join(File.dirname(__FILE__), './rest_shifter/commands/start')
+require File.join(File.dirname(__FILE__), './rest_shifter/commands/create')
 
 module RestShifter
 end
