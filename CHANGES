@@ -1,4 +1,8 @@
 
+** 0.0.9
+ - Bugfix
+   -- Fixing command -c create to include response sleep
+
 ** 0.0.8
  - Feature
    -- adding sleep funtion, to simulate response time and timeouts
