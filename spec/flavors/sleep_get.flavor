@@ -1,0 +1,8 @@
+method_used                 = "get"
+path                        = "/sleep"
+request_accept              = nil
+request_content_type        = nil
+response_sleep              =  1
+response_status             = "200"
+response_body               = "This should sleep for one second"
+response_content_type       = "application/json"

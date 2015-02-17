@@ -24,6 +24,7 @@ class Shifter < Sinatra::Base
 
   gets.each do |service|
     get service.path do
+      sleep service.response_sleep
       status service.response_status
       content_type service.response_content_type
       service.response_body
@@ -32,6 +33,7 @@ class Shifter < Sinatra::Base
 
   posts.each do |service|
     post service.path do
+      sleep service.response_sleep
       status service.response_status
       content_type service.response_content_type
       service.response_body

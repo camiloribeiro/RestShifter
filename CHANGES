@@ -1,4 +1,8 @@
 
+** 0.0.8
+ - Feature
+   -- adding sleep funtion, to simulate response time and timeouts
+
 ** 0.0.7
  - Temp hack: RACK_ENV=testing  
    -- using enviroment variable to define if we are or not using testing flavour folder

@@ -16,6 +16,7 @@ request_cookies             = nil
 request_url                 = nil
 request_path                = nil
 request_ip                  = nil
+response_sleep              =  0
 response_status             = "200"
 response_body               = "success"
 response_content_type       = "application/json"

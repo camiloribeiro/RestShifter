@@ -3,7 +3,7 @@ require File.join(File.dirname(__FILE__), '../lib/rest_shifter/shifter.rb')
 
 describe RestShifter do
 
- def app
+  def app
     Shifter.set :path_to_flavors, File.join(File.dirname(__FILE__), "../../spec/flavors")
   end
 
@@ -39,6 +39,16 @@ describe RestShifter do
         expect(last_response.headers['Content-Type']).to eq("application/foo.company.product.type-version+json")
       end
 
+    end
+    describe "Special behaviours" do
+      it "Service should sleep for a second" do
+        time = Time.now
+        get '/sleep'
+        expect(Time.now - time).to be > 1
+        expect(last_response.status).to eq(200)
+        expect(last_response.body).to eq("This should sleep for one second")
+        expect(last_response.headers['Content-Type']).to eq("application/json")
+      end
     end
   end
 end
