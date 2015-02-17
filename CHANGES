@@ -1,4 +1,8 @@
 
+** 0.0.6
+ - Bugfix: Using the right path
+   -- Accidentally changed the path to use the testing one. Build is going to brek
+
 ** 0.0.5
  - Bugfix: Missing pry gem
    -- Pry should not be a service dependency. 

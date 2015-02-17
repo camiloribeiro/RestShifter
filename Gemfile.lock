@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rest_shifter (0.0.5)
+    rest_shifter (0.0.6)
       icecream
       sinatra
 
