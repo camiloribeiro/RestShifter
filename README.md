@@ -73,13 +73,11 @@ Start the service
 
     $ rest_shifter -s
 
-Go to a browser and open the url:
-
-    $ http://localhost:4567/hello_world
+Go to a browser and open the url: [http://localhost:4567/hello_world](http://localhost:4567/hello_world)
 
 You should see the following JSON:
 
-    $ { \hello_world\ : \Your service is working fine. :D\ }
+    { \hello_world\ : \Your service is working fine. :D\ }
 
 To edit the service you just created, go to ~/.rest_shifter/flavors/hello_world.flavor 
 The name of the file is the name that you used in the command -c (create).
