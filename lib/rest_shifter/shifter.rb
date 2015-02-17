@@ -1,7 +1,6 @@
 require 'sinatra/base'
 require 'sinatra'
 require 'icecream'
-require 'pry'
 
 module RestShifter; end
 
