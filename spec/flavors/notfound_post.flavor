@@ -1,7 +1,7 @@
 method_used                 = "post"
 path                        = "/notfound"
-request_accept              = nil
-request_content_type        = nil
+request_accept              = ""
+request_content_type        = ""
 response_sleep              =  0
 response_status             = "404"
 response_body               = "Not Found"

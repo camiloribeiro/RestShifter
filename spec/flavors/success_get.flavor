@@ -1,7 +1,7 @@
 method_used                 = "get"
 path                        = "/ok"
-request_accept              = nil
-request_content_type        = nil
+request_accept              = ""
+request_content_type        = ""
 request_body                = nil
 request_scheme              = nil
 request_port                = nil

@@ -1,7 +1,7 @@
 method_used                 = "get"
 path                        = "/notfound"
 request_accept              = "text"
-request_content_type        = nil
+request_content_type        = "" 
 response_sleep              =  0
 response_status             = "201"
 response_body               = "This is just a text"
