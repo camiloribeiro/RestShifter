@@ -23,7 +23,7 @@ class Shifter < Sinatra::Base
   posts_paths = gets.map { |service| service.path  }.uniq
 
   gets.each do |service|
-    get service.path do
+    get service.path, :provides => service.request_accept do
       sleep service.response_sleep
       status service.response_status
       content_type service.response_content_type
