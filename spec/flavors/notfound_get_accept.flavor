@@ -1,0 +1,8 @@
+method_used                 = "get"
+path                        = "/notfound"
+request_accept              = "application/json"
+request_content_type        = nil
+response_sleep              =  0
+response_status             = "200"
+response_body               = "Found"
+response_content_type       = "application/json"
