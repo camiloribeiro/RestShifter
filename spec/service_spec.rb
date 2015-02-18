@@ -17,10 +17,27 @@ describe RestShifter do
       end
 
       it "Service should return 404 without accept defining routing for get" do
+        header 'Accept', 'application/xml'
         get '/notfound'
         expect(last_response.status).to eq(404)
-        expect(last_response.body).to eq("Not Found")
-        expect(last_response.headers['Content-Type']).to eq("application/foo.company.product.type-version+json")
+        expect(last_response.body).to eq("<h1>Not Found</h1>")
+        expect(last_response.headers['Content-Type']).to eq("text/html;charset=utf-8")
+      end
+
+      it "Service should return 404 without accept defining routing for get" do
+        header 'Accept', 'text'
+        get '/notfound'
+        expect(last_response.status).to eq(201)
+        expect(last_response.body).to eq("This is just a text")
+        expect(last_response.headers['Content-Type']).to eq("text/plain;charset=utf-8")
+      end
+
+      it "Accept defines rout" do
+        header 'Accept', 'application/json'
+        get '/notfound'
+        expect(last_response.status).to eq(200)
+        expect(last_response.body).to eq("Found")
+        expect(last_response.headers['Content-Type']).to eq("application/json")
       end
 
     end
