@@ -83,6 +83,7 @@ To edit the service you just created, go to ~/.rest_shifter/flavors/hello_world.
 The name of the file is the name that you used in the command -c (create).
 
 The file looks like this:
+
     method_used                 = "get"
     path                        = "/hello_world"
     request_accept              = ""
@@ -91,6 +92,7 @@ The file looks like this:
     response_status             = "200"
     response_body               = "{ \"hello_world\" : \"Your service is working fine. :D\" }"
     response_content_type       = "application/json"
+
 You basically change whatever you need to make it look like the expected or desired service. For example, replacint the path by "/clients", and restart rest_shifter, so you have the desired endpoint working as a rest api.
 
 Whatever you change in the file will change in the service as soon as you restart it.
