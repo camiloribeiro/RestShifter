@@ -25,7 +25,7 @@ describe RestShifter do
       end
 
       it "Should choose right endpoint based on accept header - text" do
-        header 'Accept', 'text'
+        header 'Accept', 'text/plain'
         get '/notfound'
         expect(last_response.status).to eq(201)
         expect(last_response.body).to eq("This is just a text")
