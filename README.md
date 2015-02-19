@@ -84,6 +84,7 @@ The name of the file is the name that you used in the command -c (create).
 
 The file looks like this:
 
+    ## ! ~/.rest_shifter/flavors/hello_world.flavor
     method_used                 = "get"
     path                        = "/hello_world"
     request_accept              = ""
