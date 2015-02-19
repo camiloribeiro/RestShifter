@@ -1,4 +1,8 @@
 
+** 0.0.10
+ - Feature
+   -- Now it is possible to define route using accept header
+
 ** 0.0.9
  - Bugfix
    -- Fixing command -c create to include response sleep
