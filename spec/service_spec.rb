@@ -9,14 +9,14 @@ describe RestShifter do
 
   describe Shifter do
     describe "Get Operations" do
-      it "Service should return 200 for get" do
+      it "Endpoint for get" do
         get '/ok'
         expect(last_response.status).to eq(200)
         expect(last_response.body).to eq("success")
         expect(last_response.headers['Content-Type']).to eq("application/json")
       end
 
-      it "Service should return 404 without accept defining routing for get" do
+      it "Known bug: Return 400 when has no endpoint with specified accept" do
         header 'Accept', 'application/xml'
         get '/notfound'
         expect(last_response.status).to eq(404)
@@ -24,7 +24,7 @@ describe RestShifter do
         expect(last_response.headers['Content-Type']).to eq("text/html;charset=utf-8")
       end
 
-      it "Service should return 404 without accept defining routing for get" do
+      it "Should choose right endpoint based on accept header - text" do
         header 'Accept', 'text'
         get '/notfound'
         expect(last_response.status).to eq(201)
@@ -32,7 +32,7 @@ describe RestShifter do
         expect(last_response.headers['Content-Type']).to eq("text/plain;charset=utf-8")
       end
 
-      it "Accept defines rout" do
+      it "Should choose right endpoint based on accept header - json" do
         header 'Accept', 'application/json'
         get '/notfound'
         expect(last_response.status).to eq(200)
@@ -42,14 +42,14 @@ describe RestShifter do
 
     end
     describe "Post operations" do
-      it "Service should return 200 for post" do
+      it "Endpoint for post" do
         post '/ok'
         expect(last_response.status).to eq(200)
         expect(last_response.body).to eq("success")
         expect(last_response.headers['Content-Type']).to eq("application/json")
       end
 
-      it "Service should return 404 without accept defining routing for post" do
+      it "Common endpoint with get should behave like post when using post" do
         post '/notfound'
         expect(last_response.status).to eq(404)
         expect(last_response.body).to eq("Not Found")
