@@ -1,0 +1,8 @@
+method_used                 = "delete"
+path                        = "/ok"
+request_accept              = ""
+request_content_type        = ""
+response_sleep              =  0
+response_status             = "200"
+response_body               = "delete success"
+response_content_type       = "application/json"

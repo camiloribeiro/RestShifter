@@ -1,4 +1,8 @@
 
+** 0.0.13
+ - Feature
+   -- Adding support to DELETE and PUT http methods
+
 ** 0.0.12
  - Code improvement 
    -- Just removing code ;)

@@ -74,6 +74,22 @@ describe RestShifter do
       end
 
     end
+    describe "Put Operations" do
+      it "PUT: Endpoint for put" do
+        put '/ok'
+        expect(last_response.status).to eq(200)
+        expect(last_response.body).to eq("put success")
+        expect(last_response.headers['Content-Type']).to eq("application/json")
+      end
+    end
+    describe "Delete Operations" do
+      it "DELETE: Endpoint for delete" do
+        delete '/ok'
+        expect(last_response.status).to eq(200)
+        expect(last_response.body).to eq("delete success")
+        expect(last_response.headers['Content-Type']).to eq("application/json")
+      end
+    end
     describe "Special behaviours" do
       it "GET: Service should sleep for a second" do
         time = Time.now
