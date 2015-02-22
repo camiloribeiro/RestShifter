@@ -33,5 +33,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'icecream'
   s.add_dependency 'sinatra'
+  s.add_dependency 'rack-ssl'
 
 end
