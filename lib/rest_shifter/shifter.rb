@@ -1,23 +1,18 @@
 require 'sinatra/base'
 require 'icecream'
 require 'rack/ssl'
+require 'webrick/https'
 
 module RestShifter; end
 
 class Shifter < Sinatra::Base
 
   def self.run_ssl! crt, key
-    require 'webrick/https'
-
-    port = 4433 
-    certificate_content = File.open(crt).read
-    key_content = File.open(key).read
-
     server_options = {
-      :Port => port,
+      :Port => 4433,
       :SSLEnable => true,
-      :SSLCertificate => OpenSSL::X509::Certificate.new(certificate_content),
-      :SSLPrivateKey => OpenSSL::PKey::RSA.new(key_content),
+      :SSLCertificate => OpenSSL::X509::Certificate.new(File.open(crt).read),
+      :SSLPrivateKey => OpenSSL::PKey::RSA.new(File.open(key).read),
       :SSLVerifyClient    => OpenSSL::SSL::VERIFY_NONE
     }
 
@@ -26,9 +21,6 @@ class Shifter < Sinatra::Base
       server.threaded = settings.threaded if server.respond_to? :threaded=
         set :running, true
     end
-    set :ssl, true
-    set :port, 4433
-    run!
   end
 
   shapes = IceCream::IceCream.new File.dirname("#{Dir.home}/.rest_shifter/flavors/*")
@@ -82,6 +74,4 @@ class Shifter < Sinatra::Base
       end
     end
   end
-
-
 end
