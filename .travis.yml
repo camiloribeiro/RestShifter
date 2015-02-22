@@ -3,3 +3,6 @@ rvm:
   - 2.1.0
 env: 
   - RACK_ENV=test
+addons:
+  code_climate:
+    repo_token:318f7fec9673173b52c7793fa9f6aeab28393086d8bda2

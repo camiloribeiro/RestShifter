@@ -2,6 +2,8 @@
 
 [![Gem Version](https://badge.fury.io/rb/rest_shifter.png)](https://rubygems.org/gems/rest_shifter)
 [![Build Status](https://secure.travis-ci.org/camiloribeiro/RestShifter.png)](http://travis-ci.org/camiloribeiro/RestShifter)
+[![Code Climate](https://codeclimate.com/github/camiloribeiro/RestShifter/badges/gpa.svg)](https://codeclimate.com/github/camiloribeiro/RestShifter)
+[![Test Coverage](https://codeclimate.com/github/camiloribeiro/RestShifter/badges/coverage.svg)](https://codeclimate.com/github/camiloribeiro/RestShifter)
 [![endorse](https://api.coderwall.com/camiloribeiro/endorsecount.png)](https://coderwall.com/camiloribeiro)
 
 
