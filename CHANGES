@@ -1,4 +1,8 @@
 
+** 0.0.11
+ - Feature
+   -- Now it is possible to start a service with https
+
 ** 0.0.10
  - Feature
    -- Now it is possible to define route using accept header

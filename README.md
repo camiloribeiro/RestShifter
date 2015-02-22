@@ -73,6 +73,10 @@ Start the service
 
     $ rest_shifter -s
 
+Optionally, you can start the service over https using captal "S":
+
+    $ rest_shifter -S /path/to/file.crt /path/to/file.key
+
 Go to a browser and open the url: [http://localhost:4567/hello_world](http://localhost:4567/hello_world)
 
 You should see the following JSON:
