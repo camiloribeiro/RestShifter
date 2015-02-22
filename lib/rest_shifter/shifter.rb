@@ -33,45 +33,24 @@ class Shifter < Sinatra::Base
     services << shapes.flavor(shape.to_s.gsub!("@", "").to_sym)
   end
 
-  gets = services.select { |service| service.method_used == "get"  }
-  gets_paths = gets.map { |service| service.path  }.uniq
-
-  posts = services.select { |service| service.method_used == "post"  }
-  posts_paths = gets.map { |service| service.path  }.uniq
-
-  gets.each do |service|
-    if service.request_accept.to_s == ''
-      get service.path do
-        sleep service.response_sleep
-        status service.response_status
-        content_type service.response_content_type
-        service.response_body
-      end
-    else 
-      get service.path, :provides => service.request_accept.to_s == '' ? "" : service.request_accept do
-        sleep service.response_sleep
-        status service.response_status
-        content_type service.response_content_type
-        service.response_body
+  def self.build_services operation 
+    operation.each do |service|
+      if service.request_accept.to_s == ''
+        send(service.method_used.to_sym, service.path) do
+          sleep service.response_sleep
+          status service.response_status
+          content_type service.response_content_type
+          service.response_body
+        end
+      else 
+        send(service.method_used.to_sym, service.path, :provides => service.request_accept.to_s == '' ? "" : service.request_accept) do
+          sleep service.response_sleep
+          status service.response_status
+          content_type service.response_content_type
+          service.response_body
+        end
       end
     end
   end
-
-  posts.each do |service|
-    if service.request_accept.to_s == ''
-      post service.path do
-        sleep service.response_sleep
-        status service.response_status
-        content_type service.response_content_type
-        service.response_body
-      end
-    else 
-      post service.path, :provides => service.request_accept.to_s == '' ? "" : service.request_accept do
-        sleep service.response_sleep
-        status service.response_status
-        content_type service.response_content_type
-        service.response_body
-      end
-    end
-  end
+  build_services services
 end
