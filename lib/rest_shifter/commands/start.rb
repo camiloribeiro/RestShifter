@@ -3,6 +3,7 @@ class RestShifter::Commands::Start
     def run(port=ARGV)
 
       prepare_server
+      Shifter.set :bind, '0.0.0.0'
       Shifter.set :port, port.to_i
       Shifter.run!
     end
