@@ -38,6 +38,7 @@ class Shifter < Sinatra::Base
     operation.each do |service|
       if service.request_accept.to_s == ''
         send(service.method_used.to_sym, service.path) do
+          response['Location'] = service.response_location unless service.response_location.to_s.empty?
           sleep service.response_sleep
           status service.response_status
           content_type service.response_content_type
@@ -45,6 +46,7 @@ class Shifter < Sinatra::Base
         end
       else 
         send(service.method_used.to_sym, service.path, :provides => service.request_accept.to_s == '' ? "" : service.request_accept) do
+          response['Location'] = service.response_location unless service.response_location.to_s.empty?
           sleep service.response_sleep
           status service.response_status
           content_type service.response_content_type

@@ -14,7 +14,8 @@ request_content_type        = ""
 response_sleep              = 0
 response_status             = "200"
 response_body               = "{ \"hello_world\" : \"Your service is working fine. :D\" }"
-response_content_type       = "application/json"') }
+response_content_type       = "application/json"
+response_location           = ""') }
     end
   end
 end
