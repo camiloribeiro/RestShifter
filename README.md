@@ -66,9 +66,9 @@ Start the service in a different port than 8080
 
 Optionally, you can start the service over https using captal "S":
 
-    $ rest_shifter -S /path/to/file.crt /path/to/file.key
+    $ rest_shifter -S 4433 /path/to/file.crt /path/to/file.key
 
-Go to a browser and open the url: [http://localhost:4567/hello_world](http://localhost:8080/hello_world)
+Go to a browser and open the url: [http://localhost:8080/hello_world](http://localhost:8080/hello_world)
 
 You should see the following JSON:
 

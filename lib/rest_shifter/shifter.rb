@@ -7,9 +7,9 @@ module RestShifter; end
 
 class Shifter < Sinatra::Base
 
-  def self.run_ssl! crt, key
+  def self.run_ssl! port, crt, key
     server_options = {
-      :Port => 4433,
+      :Port => port.to_i,
       :bind => '0.0.0.0',
       :SSLEnable => true,
       :SSLCertificate => OpenSSL::X509::Certificate.new(File.open(crt).read),

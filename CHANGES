@@ -1,4 +1,8 @@
 
+** 0.0.18
+ - Feature
+   -- now the port for ssl service must be defined when starting the service
+
 ** 0.0.17
  - internal improvements
    -- removing code duplication

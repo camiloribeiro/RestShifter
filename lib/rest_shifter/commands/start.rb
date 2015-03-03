@@ -9,12 +9,13 @@ class RestShifter::Commands::Start
     end
 
     def run_secure(args=ARGV)
+      port = args.shift
       crt = args.shift
       key = args.shift
 
       prepare_server
       Shifter.use Rack::SSL
-      Shifter.run_ssl! crt, key
+      Shifter.run_ssl! port, crt, key
     end
 
     private
