@@ -41,7 +41,7 @@ class Shifter < Sinatra::Base
           yield self, service
         end
       else 
-        send(service.method_used.to_sym, service.path, :provides => service.request_accept.to_s == '' ? "" : service.request_accept) do
+        send(service.method_used.to_sym, service.path, :provides => service.request_accept.to_s) do
           yield self, service
         end
       end
