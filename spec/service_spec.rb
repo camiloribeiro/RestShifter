@@ -91,21 +91,39 @@ describe RestShifter do
       end
     end
     describe "Special behaviours" do
-      it "GET: Service should sleep for a second" do
-        time = Time.now
-        get '/sleep'
-        expect(Time.now - time).to be > 1
-        expect(last_response.status).to eq(200)
-        expect(last_response.body).to eq("This should sleep for one second")
-        expect(last_response.headers['Content-Type']).to eq("application/json")
+      describe "Slowliness for timeouts" do
+        it "GET: Service should sleep for a second" do
+          time = Time.now
+          get '/sleep'
+          expect(Time.now - time).to be > 1
+          expect(last_response.status).to eq(200)
+          expect(last_response.body).to eq("This should sleep for one second")
+          expect(last_response.headers['Content-Type']).to eq("application/json")
+        end
+        it "POST: Service should sleep for a second" do
+          time = Time.now
+          post '/sleep'
+          expect(Time.now - time).to be > 1
+          expect(last_response.status).to eq(200)
+          expect(last_response.body).to eq("This should sleep for one second")
+          expect(last_response.headers['Content-Type']).to eq("application/json")
+        end
       end
-      it "POST: Service should sleep for a second" do
-        time = Time.now
-        post '/sleep'
-        expect(Time.now - time).to be > 1
-        expect(last_response.status).to eq(200)
-        expect(last_response.body).to eq("This should sleep for one second")
-        expect(last_response.headers['Content-Type']).to eq("application/json")
+      describe "Return location header" do
+        it "POST: Service should return location when specified" do
+          time = Time.now
+          post '/location'
+          expect(last_response.status).to eq(200)
+          expect(last_response.location).to eq("http://www.camiloribeiro.com")
+          expect(last_response.headers['Content-Type']).to eq("application/json")
+        end
+        it "GET: Service should return location when specified" do
+          time = Time.now
+          get '/location'
+          expect(last_response.status).to eq(200)
+          expect(last_response.location).to eq("http://www.camiloribeiro.com")
+          expect(last_response.headers['Content-Type']).to eq("application/json")
+        end
       end
     end
   end
