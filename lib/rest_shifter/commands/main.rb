@@ -7,8 +7,12 @@ class RestShifter::Commands::Main
 
       case cmd
       when "-s", "--start", "start"
-        RestShifter::Commands::Start.run
-        exit 0
+        cmd = args.shift
+        if !cmd.to_s.empty?
+          RestShifter::Commands::Start.run cmd
+        else
+          RestShifter::Commands::Start.run "8080"
+        end
       when "-S", "--start-secure", "start-secure"
         RestShifter::Commands::Start.run_secure
         exit 0

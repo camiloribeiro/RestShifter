@@ -1,8 +1,9 @@
 class RestShifter::Commands::Start
   class << self
-    def run(args=ARGV)
+    def run(port=ARGV)
 
       prepare_server
+      Shifter.set :port, port.to_i
       Shifter.run!
     end
 

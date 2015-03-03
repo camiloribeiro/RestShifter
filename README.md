@@ -43,21 +43,6 @@ ASCII art: http://www.chris.com/ascii/index.php?art=creatures/unicorns
 Instructions
 ==========
 
-Developing
-----------
-To develop `RestShifter`, you are going to need [Bundler][1] 
-
-    $ git git@github.com:camiloribeiro/RestShifter.git
-    $ cd RestShifter
-    $ bundle install
-    $ rake
-
-The last step is launching the regression tests and all should be green.
-
-If you have any problems, please let me know.
-
-[1]: http://gembundler.com
-
 Using
 -----
 
@@ -75,11 +60,15 @@ Start the service
 
     $ rest_shifter -s
 
+Start the service in a different port than 8080
+
+    $ rest_shifter -s 7777
+
 Optionally, you can start the service over https using captal "S":
 
     $ rest_shifter -S /path/to/file.crt /path/to/file.key
 
-Go to a browser and open the url: [http://localhost:4567/hello_world](http://localhost:4567/hello_world)
+Go to a browser and open the url: [http://localhost:4567/hello_world](http://localhost:8080/hello_world)
 
 You should see the following JSON:
 
@@ -105,6 +94,34 @@ You basically change whatever you need to make it look like the expected or desi
 Whatever you change in the file will change in the service as soon as you restart it.
 
 Enjoy
+
+Developing
+----------
+To develop `RestShifter`, you are going to need [Bundler][1] 
+
+    $ git git@github.com:camiloribeiro/RestShifter.git
+    $ cd RestShifter
+    $ bundle install
+    $ rake
+
+To run the tests you must use the environment variable RACK_ENV=test
+
+    $ RACK_ENV=test rake
+    
+Optionally, to have some fun you can run the tests with a nyan cat flying!
+
+    $ RACK_ENV=test rake nyan
+    $
+    $ --------------------_,------,
+    $ --------------------_|   /\_/\
+    $ --------------------^|__( ^ .^)
+    $ --------------------- " "  " "
+
+The last step is launching the regression tests and all should be green.
+
+If you have any problems, please let me know.
+
+[1]: http://gembundler.com
 
 LICENSE
 =======
