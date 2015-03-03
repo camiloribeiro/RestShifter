@@ -1,4 +1,8 @@
 
+** 0.0.17
+ - internal improvements
+   -- removing code duplication
+
 ** 0.0.16
  - Feature
    -- Adding support to location header

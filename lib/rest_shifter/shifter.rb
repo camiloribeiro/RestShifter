@@ -29,31 +29,31 @@ class Shifter < Sinatra::Base
     shapes = IceCream::IceCream.new File.join(File.dirname(__FILE__), "../../spec/flavors")
   end
 
-  services = []
+  @services = []
   shapes.all.each do |shape|
-    services << shapes.flavor(shape.to_s.gsub!("@", "").to_sym)
+    @services << shapes.flavor(shape.to_s.gsub!("@", "").to_sym)
   end
 
-  def self.build_services operation 
-    operation.each do |service|
+  def self.build_services
+    @services.each do |service|
       if service.request_accept.to_s == ''
         send(service.method_used.to_sym, service.path) do
-          response['Location'] = service.response_location unless service.response_location.to_s.empty?
-          sleep service.response_sleep
-          status service.response_status
-          content_type service.response_content_type
-          service.response_body
+          yield self, service
         end
       else 
         send(service.method_used.to_sym, service.path, :provides => service.request_accept.to_s == '' ? "" : service.request_accept) do
-          response['Location'] = service.response_location unless service.response_location.to_s.empty?
-          sleep service.response_sleep
-          status service.response_status
-          content_type service.response_content_type
-          service.response_body
+          yield self, service
         end
       end
     end
   end
-  build_services services
+  
+  build_services { 
+    |current, service| 
+    current.response['Location'] = service.response_location unless service.response_location.to_s.empty?
+    sleep service.response_sleep
+    current.status service.response_status
+    current.content_type service.response_content_type
+    service.response_body
+  }
 end
