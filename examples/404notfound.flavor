@@ -1,0 +1,9 @@
+method_used                 = "get"
+path                        = "/404notfound"
+request_accept              = ""
+request_content_type        = ""
+response_sleep              = 0
+response_status             = "404"
+response_body               = "not found"
+response_content_type       = ""
+response_location           = ""

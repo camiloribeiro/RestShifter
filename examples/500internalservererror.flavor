@@ -1,0 +1,9 @@
+method_used                 = "get"
+path                        = "/500internalservererror"
+request_accept              = ""
+request_content_type        = ""
+response_sleep              = 0
+response_status             = "500"
+response_body               = "internal server error"
+response_content_type       = ""
+response_location           = ""

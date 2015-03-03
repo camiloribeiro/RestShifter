@@ -1,0 +1,9 @@
+method_used                 = "get"
+path                        = "/200ok"
+request_accept              = ""
+request_content_type        = ""
+response_sleep              = 0
+response_status             = "200"
+response_body               = "success"
+response_content_type       = ""
+response_location           = ""

@@ -1,0 +1,9 @@
+method_used                 = "get"
+path                        = "/301movedpermanently"
+request_accept              = ""
+request_content_type        = ""
+response_sleep              = 0
+response_status             = "301"
+response_body               = "moved permanentely"
+response_content_type       = ""
+response_location           = ""

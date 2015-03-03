@@ -1,0 +1,9 @@
+method_used                 = "get"
+path                        = "/302found"
+request_accept              = ""
+request_content_type        = ""
+response_sleep              = 0
+response_status             = "302"
+response_body               = "found"
+response_content_type       = ""
+response_location           = ""

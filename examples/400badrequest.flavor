@@ -1,0 +1,9 @@
+method_used                 = "get"
+path                        = "/400badrequest"
+request_accept              = ""
+request_content_type        = ""
+response_sleep              = 0
+response_status             = "400"
+response_body               = "bad request"
+response_content_type       = ""
+response_location           = ""

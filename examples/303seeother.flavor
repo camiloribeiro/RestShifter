@@ -1,0 +1,9 @@
+method_used                 = "get"
+path                        = "/303seeothers"
+request_accept              = ""
+request_content_type        = ""
+response_sleep              = 0
+response_status             = "303"
+response_body               = "see others"
+response_content_type       = ""
+response_location           = ""

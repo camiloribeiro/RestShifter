@@ -1,0 +1,9 @@
+method_used                 = "get"
+path                        = "/204nocontent"
+request_accept              = ""
+request_content_type        = ""
+response_sleep              = 0
+response_status             = "204"
+response_body               = "no content"
+response_content_type       = ""
+response_location           = ""

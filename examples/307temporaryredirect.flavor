@@ -1,0 +1,9 @@
+method_used                 = "get"
+path                        = "/307temporaryredirected"
+request_accept              = ""
+request_content_type        = ""
+response_sleep              = 0
+response_status             = "307"
+response_body               = "temprarly redirect"
+response_content_type       = ""
+response_location           = ""

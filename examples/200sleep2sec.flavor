@@ -1,0 +1,9 @@
+method_used                 = "get"
+path                        = "/200sleep2sec"
+request_accept              = ""
+request_content_type        = ""
+response_sleep              = 2
+response_status             = "200"
+response_body               = "sleep 2 seconds"
+response_content_type       = ""
+response_location           = ""
