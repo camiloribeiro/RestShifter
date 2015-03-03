@@ -7,12 +7,10 @@ class RestShifter::Commands::Main
 
       case cmd
       when "-s", "--start", "start"
-        cmd = args.shift
-        if !cmd.to_s.empty?
-          RestShifter::Commands::Start.run cmd
-        else
-          RestShifter::Commands::Start.run "8080"
-        end
+        port = args.shift 
+        port = "8080" unless !port.to_s.empty?
+        RestShifter::Commands::Start.run port
+        exit 0
       when "-S", "--start-secure", "start-secure"
         RestShifter::Commands::Start.run_secure
         exit 0
