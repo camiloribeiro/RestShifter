@@ -88,6 +88,7 @@ The file looks like this:
     response_status             = "200"
     response_body               = "{ \"hello_world\" : \"Your service is working fine. :D\" }"
     response_content_type       = "application/json"
+    response_location           = ""
 
 You basically change whatever you need to make it look like the expected or desired service. For example, replacint the path by "/clients", and restart rest_shifter, so you have the desired endpoint working as a rest api.
 
