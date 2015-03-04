@@ -50,10 +50,10 @@ class Shifter < Sinatra::Base
   
   build_services { 
     |current, service| 
-    current.response['Location'] = service.response_location unless service.response_location.to_s.empty?
     sleep service.response_sleep
+    current.response['Location'] = service.response_location unless service.response_location.to_s.empty?
+    current.content_type service.response_content_type unless service.response_content_type.to_s.empty?
     current.status service.response_status
-    current.content_type service.response_content_type
     service.response_body
   }
 end

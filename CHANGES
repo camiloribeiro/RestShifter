@@ -1,4 +1,8 @@
 
+** 0.0.19
+ - Bugfix
+   -- return 500 when content type response was not defined
+
 ** 0.0.18
  - Feature
    -- now the port for ssl service must be defined when starting the service

@@ -40,6 +40,14 @@ describe RestShifter do
         expect(last_response.headers['Content-Type']).to eq("application/json")
       end
 
+      it "GET: No content type defined on response" do
+        get '/nocontenttype'
+        expect(last_response.status).to eq(202)
+        expect(last_response.body).to eq("no content type defined on response")
+        expect(last_response.headers['Content-Type']).to eq("text/html;charset=utf-8")
+      end
+
+
     end
     describe "Post operations" do
       it "POST: Endpoint for post" do
