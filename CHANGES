@@ -1,4 +1,8 @@
 
+** 0.0.22
+ - Bugfix
+   -- Binding host. Access from outside of localhost is finally fixed.
+
 ** 0.0.21
  - Bugfix
    -- Adding bind to shifter class

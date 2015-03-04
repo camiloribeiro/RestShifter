@@ -10,7 +10,7 @@ class Shifter < Sinatra::Base
   def self.run_ssl! port, crt, key
     server_options = {
       :Port => port.to_i,
-      :Bind => '0.0.0.0',
+      :Host => bind,
       :SSLEnable => true,
       :SSLCertificate => OpenSSL::X509::Certificate.new(File.open(crt).read),
       :SSLPrivateKey => OpenSSL::PKey::RSA.new(File.open(key).read),
