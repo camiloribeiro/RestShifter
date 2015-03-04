@@ -1,4 +1,8 @@
 
+** 0.0.20
+ - Bugfix
+   -- Bind should be captalized. It shoul fix the ssl service to be available out of localhost
+
 ** 0.0.19
  - Bugfix
    -- return 500 when content type response was not defined
