@@ -1,4 +1,8 @@
 
+** 0.0.21
+ - Bugfix
+   -- Adding bind to shifter class
+
 ** 0.0.20
  - Bugfix
    -- Bind should be captalized. It shoul fix the ssl service to be available out of localhost

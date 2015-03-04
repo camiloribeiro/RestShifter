@@ -15,6 +15,7 @@ class RestShifter::Commands::Start
 
       prepare_server
       Shifter.use Rack::SSL
+      Shifter.set :bind, '0.0.0.0'
       Shifter.run_ssl! port, crt, key
     end
 
