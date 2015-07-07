@@ -7,16 +7,16 @@ module RestShifter; end
 
 class Shifter < Sinatra::Base
 
-  def self.run_ssl! port, crt, key
+  def self.run_ssl! port, cert, key
     server_options = {
       :Port => port.to_i,
       :Host => bind,
       :SSLEnable => true,
-      :SSLCertificate => OpenSSL::X509::Certificate.new(File.open(crt).read),
+      :SSLCertificate => OpenSSL::X509::Certificate.new(File.open(cert).read),
       :SSLPrivateKey => OpenSSL::PKey::RSA.new(File.open(key).read),
       :SSLVerifyClient    => OpenSSL::SSL::VERIFY_NONE
     }
-
+    
     Rack::Handler::WEBrick.run self, server_options do |server|
       [:INT, :TERM].each { |sig| trap(sig) { server.stop } }
       server.threaded = settings.threaded if server.respond_to? :threaded=

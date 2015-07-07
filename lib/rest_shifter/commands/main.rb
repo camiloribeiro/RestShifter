@@ -11,8 +11,17 @@ class RestShifter::Commands::Main
         port = "8080" unless !port.to_s.empty?
         RestShifter::Commands::Start.run port
         exit 0
+      when "-X", "--start-secure-no-cert", "start-secure-no-cert"
+        port = args.shift 
+        port = "4443" unless !port.to_s.empty?
+        RestShifter::Commands::Start.run_secure_no_cert port
+        exit 0
       when "-S", "--start-secure", "start-secure"
-        RestShifter::Commands::Start.run_secure
+        port = args.shift 
+        cert = args.shift 
+        key = args.shift 
+        port = "4443" unless !port.to_s.empty?
+        RestShifter::Commands::Start.run_secure port, cert, key
         exit 0
       when "-c", "--create", "create"
         RestShifter::Commands::Create.run
