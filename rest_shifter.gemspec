@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'nyan-cat-formatter'
   s.add_development_dependency 'rack-test'
 
-  s.add_dependency 'icecream', '~> 0.0.15'
+  s.add_dependency 'icecream'
   s.add_dependency 'sinatra'
   s.add_dependency 'rack-ssl'
 
