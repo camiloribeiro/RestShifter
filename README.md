@@ -96,6 +96,21 @@ Whatever you change in the file will change in the service as soon as you restar
 
 Enjoy
 
+Using with Docker <3
+-----------------------
+
+When using with docker you don't need to add either ruby or the gem itself to your filesystem, you just need to have docker running in your computer.
+
+      $ docker pull camiloribeiro/rest_shifter:latest
+      $ docker run -it -v $PWD/spec/flavors:/root/.rest_shifter/flavors -p 8080:8080 camiloribeiro/rest_shifter -s
+
+Access http://192.168.59.103:8080/hello_world
+It should return a 200 ok response status with the json: 
+
+      $ { "hello_world" : "Your service is working fine. :D" }
+
+Replace the spec/flavors for a directory where you have your flavor files as described in this document. The container uses rest_shifter as endpoint, so if you want to start in SSL mode, just use -S instead. All the other parameters also work with the docker container entrypoint.
+
 Developing
 ----------
 To develop `RestShifter`, you are going to need [Bundler][1] 
