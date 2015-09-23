@@ -104,10 +104,16 @@ When using with docker you don't need to add either ruby or the gem itself to yo
       $ docker pull camiloribeiro/rest_shifter:latest
       $ docker run -it -v $PWD/spec/flavors:/root/.rest_shifter/flavors -p 8080:8080 camiloribeiro/rest_shifter -s
 
-Access http://192.168.59.103:8080/hello_world
+Access http://localhost:8080/hello_world
 It should return a 200 ok response status with the json: 
 
       $ { "hello_world" : "Your service is working fine. :D" }
+
+Or you can also run a version in https:
+
+      $ docker run -it -v $PWD/spec/flavors:/root/.rest_shifter/flavors -p 8080:4443 camiloribeiro/rest_shifter -X
+
+Access http://localhost:8080/hello_world
 
 Replace the spec/flavors for a directory where you have your flavor files as described in this document. The container uses rest_shifter as endpoint, so if you want to start in SSL mode, just use -S instead. All the other parameters also work with the docker container entrypoint.
 
