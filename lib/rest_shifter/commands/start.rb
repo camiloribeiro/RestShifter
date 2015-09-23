@@ -13,7 +13,7 @@ class RestShifter::Commands::Start
       prepare_server
       Shifter.use Rack::SSL
       Shifter.set :bind, '0.0.0.0'
-      Shifter.run_ssl! port.to_i, File.join(File.dirname(__FILE__), "../../fake_certs/localhost.cert"), File.join(File.dirname(__FILE__), "../../fake_certs/localhost.key")
+      Shifter.run_ssl! port.to_i, File.join(File.dirname(__FILE__), "fake_certs/localhost.cert"), File.join(File.dirname(__FILE__), "fake_certs/localhost.key")
     end
 
     def run_secure(args=ARGV)
