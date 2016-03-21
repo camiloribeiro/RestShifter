@@ -7,3 +7,4 @@ response_status             = "202"
 response_body               = "no content type defined on response"
 response_content_type       = ""
 response_location           = ""
+response_headers            = []

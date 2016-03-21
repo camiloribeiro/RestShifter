@@ -1,9 +1,10 @@
 method_used                 = "get"
 path                        = "/notfound"
 request_accept              = "text/plain"
-request_content_type        = "" 
+request_content_type        = ""
 response_sleep              =  0
 response_status             = "201"
 response_body               = "This is just a text"
 response_content_type       = "text/plain"
 response_location           = ""
+response_headers            = []

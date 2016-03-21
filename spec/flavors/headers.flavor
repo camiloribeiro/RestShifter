@@ -1,10 +1,10 @@
 method_used                 = "get"
-path                        = "/location"
+path                        = "/headers"
 request_accept              = ""
 request_content_type        = ""
 response_sleep              =  0
 response_status             = "200"
 response_body               = "success"
 response_content_type       = "application/json"
-response_location           = "http://www.camiloribeiro.com"
-response_headers            = []
+response_location           = ""
+response_headers            = ["X-Custom-Header1", "first custom header content", "X-Custom-Header2", "second custom header"]

@@ -8,3 +8,4 @@ response_status             = "200"
 response_body               = { "hello_world" : "Your service is working fine. :D" }
 response_content_type       = "application/json"
 response_location           = ""
+response_headers            = []

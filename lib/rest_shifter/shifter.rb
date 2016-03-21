@@ -16,7 +16,7 @@ class Shifter < Sinatra::Base
       :SSLPrivateKey => OpenSSL::PKey::RSA.new(File.open(key).read),
       :SSLVerifyClient    => OpenSSL::SSL::VERIFY_NONE
     }
-    
+
     Rack::Handler::WEBrick.run self, server_options do |server|
       [:INT, :TERM].each { |sig| trap(sig) { server.stop } }
       server.threaded = settings.threaded if server.respond_to? :threaded=
@@ -40,17 +40,24 @@ class Shifter < Sinatra::Base
         send(service.method_used.to_sym, service.path) do
           yield self, service
         end
-      else 
+      else
         send(service.method_used.to_sym, service.path, :provides => service.request_accept.to_s) do
           yield self, service
         end
       end
     end
   end
-  
-  build_services { 
-    |current, service| 
+
+  build_services {
+    |current, service|
     sleep service.response_sleep
+
+    i = 0
+    while i < service.response_headers.length - 1
+      current.response[service.response_headers[i]] = service.response_headers[i+1]
+      i = i + 2
+    end
+
     current.response['Location'] = service.response_location unless service.response_location.to_s.empty?
     current.content_type service.response_content_type unless service.response_content_type.to_s.empty?
     current.status service.response_status
