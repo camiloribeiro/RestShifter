@@ -1,4 +1,9 @@
 
+** 0.0.28
+  - Thanks @naxhh
+   -- custom headers
+   -- code improviment
+
 ** 0.0.22
  - Bugfix
    -- Binding host. Access from outside of localhost is finally fixed.
