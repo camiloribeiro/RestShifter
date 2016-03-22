@@ -7,3 +7,4 @@ response_status             = "200"
 response_body               = "success"
 response_content_type       = "application/json"
 response_location           = ""
+response_headers            = []

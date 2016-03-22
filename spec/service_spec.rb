@@ -133,6 +133,15 @@ describe RestShifter do
           expect(last_response.headers['Content-Type']).to eq("application/json")
         end
       end
+      describe "Custom headers" do
+        it "GET: Should return headers when specified" do
+          get '/headers'
+          expect(last_response.status).to eq(200)
+          expect(last_response.headers['X-Custom-Header1']).to eq("first custom header content")
+          expect(last_response.headers['X-Custom-Header2']).to eq("second custom header")
+          expect(last_response.headers['Content-Type']).to eq("application/json")
+        end
+      end
     end
   end
 end
