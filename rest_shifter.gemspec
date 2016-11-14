@@ -21,7 +21,9 @@ Gem::Specification.new do |s|
 
   s.require_paths = ["lib"]
 
-  s.add_development_dependency 'codeclimate-test-reporter'
+  s.add_development_dependency 'simplecov', '~> 0.12.0'
+  s.add_development_dependency 'simplecov-json', '~> 0.2'
+  s.add_development_dependency 'codeclimate-test-reporter', '~> 1.0.3'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'cucumber'
   s.add_development_dependency 'rake'
