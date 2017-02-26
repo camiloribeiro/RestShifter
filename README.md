@@ -4,7 +4,7 @@
 [![Build Status](https://secure.travis-ci.org/camiloribeiro/RestShifter.png)](http://travis-ci.org/camiloribeiro/RestShifter)
 [![Code Climate](https://codeclimate.com/github/camiloribeiro/RestShifter/badges/gpa.svg)](https://codeclimate.com/github/camiloribeiro/RestShifter)
 [![Test Coverage](https://codeclimate.com/github/camiloribeiro/RestShifter/badges/coverage.svg)](https://codeclimate.com/github/camiloribeiro/RestShifter)
-
+[![Dependency Status](https://gemnasium.com/badges/github.com/camiloribeiro/RestShifter.svg)](https://gemnasium.com/github.com/camiloribeiro/RestShifter)
 
                                   /
                        __       //      The rest api ShapeShifter!
