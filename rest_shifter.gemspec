@@ -23,9 +23,9 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'simplecov', '= 0.12.0'
   s.add_development_dependency 'simplecov-json', '= 0.2'
-  s.add_development_dependency 'codeclimate-test-reporter', '= 1.0.3'
+  s.add_development_dependency 'codeclimate-test-reporter', '= 1.0.6'
   s.add_development_dependency 'pry', '= 0.10.3'
-  s.add_development_dependency 'cucumber', '= 2.3.3'
+  s.add_development_dependency 'cucumber', '= 2.4.0'
   s.add_development_dependency 'rake', '= 11.1.2'
   s.add_development_dependency 'rest-client', '= 1.8.0'
   s.add_development_dependency 'rspec', '= 3.4.0'
