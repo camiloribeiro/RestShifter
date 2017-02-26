@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pry', '= 0.10.4'
   s.add_development_dependency 'cucumber', '= 2.4.0'
   s.add_development_dependency 'rake', '= 12.0.0'
-  s.add_development_dependency 'rest-client', '= 1.8.0'
+  s.add_development_dependency 'rest-client', '= 2.0.0'
   s.add_development_dependency 'rspec', '= 3.5.0'
   s.add_development_dependency 'nyan-cat-formatter', '= 0.11'
   s.add_development_dependency 'rack-test', '= 0.6.3'
