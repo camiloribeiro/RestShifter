@@ -21,19 +21,19 @@ Gem::Specification.new do |s|
 
   s.require_paths = ["lib"]
 
-  s.add_development_dependency 'simplecov', '~> 0.12.0'
-  s.add_development_dependency 'simplecov-json', '~> 0.2'
-  s.add_development_dependency 'codeclimate-test-reporter', '~> 1.0.3'
-  s.add_development_dependency 'pry'
-  s.add_development_dependency 'cucumber'
-  s.add_development_dependency 'rake'
-  s.add_development_dependency 'rest-client'
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'nyan-cat-formatter'
-  s.add_development_dependency 'rack-test'
+  s.add_development_dependency 'simplecov', '= 0.12.0'
+  s.add_development_dependency 'simplecov-json', '= 0.2'
+  s.add_development_dependency 'codeclimate-test-reporter', '= 1.0.3'
+  s.add_development_dependency 'pry', '= 0.10.3'
+  s.add_development_dependency 'cucumber', '= 2.3.3'
+  s.add_development_dependency 'rake', '= 11.1.2'
+  s.add_development_dependency 'rest-client', '= 1.8.0'
+  s.add_development_dependency 'rspec', '= 3.4.0'
+  s.add_development_dependency 'nyan-cat-formatter', '= 0.11'
+  s.add_development_dependency 'rack-test', '= 0.6.3'
 
   s.add_dependency 'icecream', '= 0.0.15'
-  s.add_dependency 'sinatra'
-  s.add_dependency 'rack-ssl'
+  s.add_dependency 'sinatra', '= 1.4.7'
+  s.add_dependency 'rack-ssl', '= 1.4.1'
 
 end
