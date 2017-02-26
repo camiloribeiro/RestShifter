@@ -38,6 +38,11 @@ As simples is always better, I've put here a ridiculously easy to run app with n
 
 ASCII art: http://www.chris.com/ascii/index.php?art=creatures/unicorns
 
+Code of Conduct
+============
+
+This project adheres to the Contributor Covenant [code of conduct](CODE_OF_CONDUCT.md).
+By participating, you are expected to uphold this code.
 
 Instructions
 ==========
